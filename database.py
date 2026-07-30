@@ -38,3 +38,9 @@ def editar_pasta(con, pasta_id,novo_titulo):
 def deletar_pasta(con, pasta_id):
     con.execute("DELETE FROM pastas WHERE id = ?", (pasta_id,))
     con.commit()
+
+def buscar_pasta(con, pasta_id):
+    return con.execute("SELECT titulo FROM pastas WHERE id = ?", (pasta_id,)).fetchone()[0]
+
+def buscar_card(con, card_id):
+    return con.execute("SELECT conteudo_frente, conteudo_verso FROM cards WHERE id = ?", (card_id,)).fetchone()

@@ -1,0 +1,75 @@
+Screen {
+    align: center middle;
+    background: #2d1b3d;
+}
+
+Container {
+    align: center middle;
+    height: auto;
+    width: auto;
+}
+
+/* Título das pastas / nome da pasta */
+Static {
+    color: #ff8fcf;
+    text-style: bold;
+    content-align: center middle;
+    margin-bottom: 1;
+}
+
+/* O flashcard em si — grande e destacado */
+#frente, #verso {
+    color: #ff8fcf;
+    background: #3d2b4d;
+    border: round #c77dff;
+    padding: 3 6;
+    width: 60;
+    min-height: 7;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+/* Botões — menores que o card */
+Button {
+    background: #ff5fa2;
+    color: white;
+    border: tall #c77dff;
+    width: 25;
+    padding: 1 2;
+    margin: 1 0;
+    content-align: center middle;
+}
+
+Button:hover {
+    background: #ff8fcf;
+    border: tall #ff8fcf;
+}
+
+/* Inputs (criar/editar) no mesmo tom */
+Input {
+    border: round #c77dff;
+    background: #3d2b4d;
+    color: #ff8fcf;
+    width: 40;
+    margin-bottom: 1;
+}
+
+/* Cards da lista — maiores e com estilo próprio */
+.card-item {
+    background: #3d2b4d;
+    color: #ff8fcf;
+    border: round #c77dff;
+    width: 50;
+    height: auto;        /* deixa crescer conforme o conteúdo */
+    padding: 1 2;
+    margin: 1 0;
+    text-style: bold;
+    content-align: center middle;
+}
+
+.card-item:hover {
+    background: #4d3b5d;
+    border: round #ff8fcf;
+}
