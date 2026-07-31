@@ -1,7 +1,7 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Button, Static, Input
 from textual.screen import Screen
-from textual.containers import Horizontal, VerticalScroll, Container
+from textual.containers import Horizontal, VerticalScroll, Container, HorizontalScroll
 from database import con, listar_pastas,deletar_pasta, criar_pasta, editar_pasta, buscar_pasta, criar_card, editar_card, listar_cards, buscar_card
 
 
@@ -9,7 +9,7 @@ class PastasScreen(Screen):
     def compose(self) -> ComposeResult:
         pastas = listar_pastas(con)
 
-        with Horizontal():
+        with HorizontalScroll():
             for pasta in pastas:
                 yield Button(pasta[1], id=f"pasta-{pasta[0]}")
             yield Button("+ Criar pasta", id=f"criar-pasta")
